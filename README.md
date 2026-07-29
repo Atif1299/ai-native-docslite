@@ -107,3 +107,7 @@ scripts/e2e-live.mts
 ## Stack
 
 Next.js 15 · React 19 · TypeScript · TipTap · Supabase · jose · bcryptjs · Vitest · Vercel
+
+---
+
+**Maintained:** Jul 2026 · demo + docs kept in sync with the live Vercel deploy.
