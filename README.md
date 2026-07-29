@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/docslite-banner.png" alt="DocsLite — Create · Edit · Share" width="920" />
+  <img src="docs/assets/docslite-banner.png" alt="DocsLite — Create · Edit · Share" width="720" height="190" />
 </p>
 
 <p align="center">
