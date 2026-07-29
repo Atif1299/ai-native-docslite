@@ -1,26 +1,207 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root
+{
+  --background: #f7f7f5;
+  --foreground: #1c1917;
+  --ink: #1c1917;
+  --ink-hover: #292524;
+  --surface: #ffffff;
+  --surface-muted: #f0efec;
+  --border: #e7e5e4;
+  --muted: #78716c;
+  --danger: #b91c1c;
+  --danger-border: #fecaca;
+  --danger-soft: #fef2f2;
+  --focus: #1c1917;
 }
 
-@theme inline {
+@theme inline
+{
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body
+{
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@keyframes fade-in
+{
+  from
+  {
+    opacity: 0;
+  }
+
+  to
+  {
+    opacity: 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes modal-in
+{
+  from
+  {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+
+  to
+  {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toast-in
+{
+  from
+  {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in
+{
+  animation: fade-in 160ms ease-out;
+}
+
+.animate-modal-in
+{
+  animation: modal-in 180ms ease-out;
+}
+
+.animate-toast-in
+{
+  animation: toast-in 180ms ease-out;
+}
+
+.animate-status-in
+{
+  animation: fade-in 200ms ease-out;
+}
+
+.prose-editor h1
+{
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0.75rem 0;
+  line-height: 1.25;
+}
+
+.prose-editor h2
+{
+  font-size: 1.5rem;
+  font-weight: 650;
+  margin: 0.65rem 0;
+}
+
+.prose-editor h3
+{
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.prose-editor p
+{
+  margin: 0.4rem 0;
+  line-height: 1.65;
+}
+
+.prose-editor ul
+{
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+.prose-editor ol
+{
+  list-style: decimal;
+  padding-left: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+.prose-editor li
+{
+  margin: 0.2rem 0;
+}
+
+.prose-editor strong
+{
+  font-weight: 700;
+}
+
+.prose-editor em
+{
+  font-style: italic;
+}
+
+.prose-editor u
+{
+  text-decoration: underline;
+}
+
+.prose-editor p.is-editor-empty:first-child::before
+{
+  color: #a8a29e;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.input-field
+{
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--ink);
+  outline: none;
+}
+
+.input-field:focus
+{
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px rgba(28, 25, 23, 0.08);
+}
+
+.select-field
+{
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2378716c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding: 0.625rem 2.25rem 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--ink);
+  outline: none;
+  cursor: pointer;
+}
+
+.select-field:focus
+{
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px rgba(28, 25, 23, 0.08);
 }

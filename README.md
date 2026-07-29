@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="docs/assets/docslite-banner.png" alt="DocsLite — Create · Edit · Share" width="920" />
+</p>
 
-## Getting Started
+<p align="center">
+  <img alt="Next.js" src="https://img.shields.io/badge/NEXT.JS-15-black?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img alt="React" src="https://img.shields.io/badge/REACT-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img alt="TypeScript" src="https://img.shields.io/badge/TYPESCRIPT-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img alt="TipTap" src="https://img.shields.io/badge/TIPTAP-EDITOR-A78BFA?style=for-the-badge" />
+  <img alt="Supabase" src="https://img.shields.io/badge/SUPABASE-POSTGRES-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
+  <img alt="Vercel" src="https://img.shields.io/badge/VERCEL-DEPLOY-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+</p>
 
-First, run the development server:
+<p align="center">
+  <strong>AI-native collaborative document editor</strong> — create, rich-edit, import, share, and persist with a product-minded MVP slice.
+</p>
+
+<p align="center">
+  <a href="https://app-blush-seven-53.vercel.app">Live demo</a> ·
+  <a href="#quick-start">Quick start</a> ·
+  <a href="#what-ships">What ships</a> ·
+  <a href="#architecture">Architecture</a> ·
+  <a href="#ai-native-workflow">AI workflow</a> ·
+  <a href="#demo-accounts">Demo accounts</a>
+</p>
+
+---
+
+## Why this exists
+
+DocsLite was built as a **focused full-stack product slice** under a tight timebox: not a Google Docs clone, but a coherent editor with ownership, sharing, import, persistence, and a live deployment reviewers can click through.
+
+It is **AI-native in how it was engineered** (decomposition, iteration, verification) — the product itself is a collaborative docs MVP with deliberate scope cuts.
+
+## Live demo
+
+**URL:** [https://app-blush-seven-53.vercel.app](https://app-blush-seven-53.vercel.app)
+
+### Demo accounts
+
+| User | Email | Password | Role |
+|------|-------|----------|------|
+| Alice | `alice@ajaia.demo` | `password123` | Owner |
+| Bob | `bob@ajaia.demo` | `password123` | Collaborator |
+
+Try: sign in as Alice → create/edit → Share with Bob → sign out → sign in as Bob → open **Shared with you**.
+
+## What ships
+
+- Create, rename, TipTap rich text (bold / italic / underline / H1–H3 / lists)
+- Autosave + manual save; reopen after refresh
+- Import `.txt` / `.md` (max 1MB) → new editable document
+- Owner / editor / viewer sharing with Owned vs Shared lists
+- In-app confirm dialogs (no browser `confirm` chrome)
+- Supabase Postgres persistence + Vercel deploy
+- Vitest suite + production E2E smoke script
+
+### Intentionally deprioritized
+
+Realtime cursors, comments, version history, DOCX/PDF, OAuth signup.
+
+## Quick start
 
 ```bash
+git clone https://github.com/Atif1299/ai-native-docslite.git
+cd ai-native-docslite
+npm install
+cp .env.example .env
+# fill AUTH_SECRET + SUPABASE_URL + SUPABASE_ANON_KEY
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Purpose |
+|---------|---------|
+| `npm run dev` | Local development |
+| `npm run build` / `npm start` | Production |
+| `npm test` | Vitest (import + access control) |
+| `npm run test:e2e` | Live production API smoke |
 
-## Learn More
+## Architecture
 
-To learn more about Next.js, take a look at the following resources:
+See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for priorities and tradeoffs.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+Browser (React / TipTap)
+  → Next.js App Router + Route Handlers
+  → Cookie sessions (jose) + bcryptjs
+  → Supabase Postgres (User · Document · DocumentShare)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## AI-native workflow
 
-## Deploy on Vercel
+See [`docs/AI_WORKFLOW.md`](docs/AI_WORKFLOW.md) for tools used, what AI sped up, what was rejected, and how correctness was verified.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project layout
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/app/           # pages + API routes
+src/components/    # editor, dashboard, UI kit
+src/lib/           # auth, store, import
+docs/              # architecture + AI notes + assets
+tests/             # Vitest
+scripts/e2e-live.mts
+```
+
+## Stack
+
+Next.js 15 · React 19 · TypeScript · TipTap · Supabase · jose · bcryptjs · Vitest · Vercel
+
+## License
+
+Private assessment / portfolio piece unless otherwise noted.
