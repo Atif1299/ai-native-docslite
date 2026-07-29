@@ -47,6 +47,8 @@ Realtime cursors, comments, version history, DOCX/PDF, OAuth signup.
 
 **URL:** [https://app-blush-seven-53.vercel.app](https://app-blush-seven-53.vercel.app)
 
+Use the seeded accounts below for a full owner → collaborator share pass.
+
 ## Demo accounts
 
 | User | Email | Password | Role |
