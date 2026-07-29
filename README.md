@@ -1,49 +1,33 @@
-<p align="center">
-  <img src="docs/assets/docslite-banner.png" alt="DocsLite — Create · Edit · Share" width="720" />
-</p>
+<div align="center">
 
-<p align="center">
-  <img alt="Next.js" src="https://img.shields.io/badge/NEXT.JS-15-black?style=for-the-badge&logo=nextdotjs&logoColor=white" />
-  <img alt="React" src="https://img.shields.io/badge/REACT-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img alt="TypeScript" src="https://img.shields.io/badge/TYPESCRIPT-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img alt="TipTap" src="https://img.shields.io/badge/TIPTAP-EDITOR-A78BFA?style=for-the-badge" />
-  <img alt="Supabase" src="https://img.shields.io/badge/SUPABASE-POSTGRES-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
-  <img alt="Vercel" src="https://img.shields.io/badge/VERCEL-DEPLOY-000000?style=for-the-badge&logo=vercel&logoColor=white" />
-</p>
+<img src="docs/assets/readme-banner.svg" width="100%" alt="DocsLite — Create · Edit · Share" />
 
-<p align="center">
-  <strong>AI-native collaborative document editor</strong> — create, rich-edit, import, share, and persist with a product-minded MVP slice.
-</p>
+<br />
 
-<p align="center">
-  <a href="https://app-blush-seven-53.vercel.app">Live demo</a> ·
-  <a href="#quick-start">Quick start</a> ·
-  <a href="#what-ships">What ships</a> ·
-  <a href="#architecture">Architecture</a> ·
-  <a href="#ai-native-workflow">AI workflow</a> ·
-  <a href="#demo-accounts">Demo accounts</a>
-</p>
+[![Next.js](https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TipTap](https://img.shields.io/badge/TipTap-Editor-A78BFA?style=for-the-badge)](https://tiptap.dev/)
+[![Supabase](https://img.shields.io/badge/Supabase-Postgres-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-Deploy-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+
+<br />
+
+**AI-native collaborative document editor — create, rich-edit, import, share, and persist in one product-minded MVP.**
+
+<br />
+
+[Live demo](https://app-blush-seven-53.vercel.app) · [Quick start](#quick-start) · [What ships](#what-ships) · [Architecture](#architecture) · [AI workflow](#ai-native-workflow) · [Demo accounts](#demo-accounts)
+
+</div>
 
 ---
 
-## Why this exists
+## What is DocsLite?
 
-DocsLite was built as a **focused full-stack product slice** under a tight timebox: not a Google Docs clone, but a coherent editor with ownership, sharing, import, persistence, and a live deployment reviewers can click through.
+**DocsLite** is a lightweight collaborative document editor: seeded login, TipTap rich text, `.txt`/`.md` import, owner/editor/viewer sharing, and durable persistence on Supabase — deployed for click-through review on Vercel.
 
-It is **AI-native in how it was engineered** (decomposition, iteration, verification) — the product itself is a collaborative docs MVP with deliberate scope cuts.
-
-## Live demo
-
-**URL:** [https://app-blush-seven-53.vercel.app](https://app-blush-seven-53.vercel.app)
-
-### Demo accounts
-
-| User | Email | Password | Role |
-|------|-------|----------|------|
-| Alice | `alice@ajaia.demo` | `password123` | Owner |
-| Bob | `bob@ajaia.demo` | `password123` | Collaborator |
-
-Try: sign in as Alice → create/edit → Share with Bob → sign out → sign in as Bob → open **Shared with you**.
+Built as an **AI-native engineering exercise**: deliberate scope, full-stack execution, and verification under a real timebox (not a Google Docs clone).
 
 ## What ships
 
@@ -58,6 +42,19 @@ Try: sign in as Alice → create/edit → Share with Bob → sign out → sign i
 ### Intentionally deprioritized
 
 Realtime cursors, comments, version history, DOCX/PDF, OAuth signup.
+
+## Live demo
+
+**URL:** [https://app-blush-seven-53.vercel.app](https://app-blush-seven-53.vercel.app)
+
+## Demo accounts
+
+| User | Email | Password | Role |
+|------|-------|----------|------|
+| Alice | `alice@ajaia.demo` | `password123` | Owner |
+| Bob | `bob@ajaia.demo` | `password123` | Collaborator |
+
+Try: sign in as Alice → create/edit → Share with Bob → sign out → sign in as Bob → open **Shared with you**.
 
 ## Quick start
 
@@ -110,7 +107,3 @@ scripts/e2e-live.mts
 ## Stack
 
 Next.js 15 · React 19 · TypeScript · TipTap · Supabase · jose · bcryptjs · Vitest · Vercel
-
-## License
-
-Private assessment / portfolio piece unless otherwise noted.
