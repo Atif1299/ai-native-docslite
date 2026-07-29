@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/readme-banner.svg" width="100%" alt="DocsLite — Create · Edit · Share" />
+<img src="docs/assets/readme-banner.png" width="100%" alt="DocsLite — Create · Edit · Share" />
 
 <br />
 
