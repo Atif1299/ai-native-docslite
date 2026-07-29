@@ -27,7 +27,7 @@
 
 **DocsLite** is a lightweight collaborative document editor: seeded login, TipTap rich text, `.txt`/`.md` import, owner/editor/viewer sharing, and durable persistence on Supabase — deployed for click-through review on Vercel.
 
-Built as an **AI-native engineering exercise**: deliberate scope, full-stack execution, and verification under a real timebox (not a Google Docs clone).
+Built as an **AI-native engineering exercise**: deliberate scope, full-stack execution, and verification under a real timebox (not a Google Docs clone). Reviewers can exercise create → edit → share → reopen without setup beyond the demo accounts below.
 
 ## What ships
 
