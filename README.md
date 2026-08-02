@@ -51,10 +51,10 @@ Use the seeded accounts below for a full owner → collaborator share pass.
 
 ## Demo accounts
 
-| User | Email | Password | Role |
-|------|-------|----------|------|
-| Alice | `alice@ajaia.demo` | `password123` | Owner |
-| Bob | `bob@ajaia.demo` | `password123` | Collaborator |
+| User  | Email              | Password      | Role         |
+| ----- | ------------------ | ------------- | ------------ |
+| Alice | `alice@ajaia.demo` | `password123` | Owner        |
+| Bob   | `bob@ajaia.demo`   | `password123` | Collaborator |
 
 Try: sign in as Alice → create/edit → Share with Bob → sign out → sign in as Bob → open **Shared with you**.
 
@@ -73,12 +73,12 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ### Scripts
 
-| Command | Purpose |
-|---------|---------|
-| `npm run dev` | Local development |
-| `npm run build` / `npm start` | Production |
-| `npm test` | Vitest (import + access control) |
-| `npm run test:e2e` | Live production API smoke |
+| Command                       | Purpose                          |
+| ----------------------------- | -------------------------------- |
+| `npm run dev`                 | Local development                |
+| `npm run build` / `npm start` | Production                       |
+| `npm test`                    | Vitest (import + access control) |
+| `npm run test:e2e`            | Live production API smoke        |
 
 ## Architecture
 
@@ -113,3 +113,5 @@ Next.js 15 · React 19 · TypeScript · TipTap · Supabase · jose · bcryptjs �
 ---
 
 **Maintained:** Jul 2026 · demo + docs kept in sync with the live Vercel deploy.
+
+Built/maintained with Keelen.
