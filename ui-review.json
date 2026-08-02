@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "scenarios": [
+    {
+      "route": "/",
+      "state": "resolved",
+      "viewports": [375, 768, 1280],
+      "theme": "light",
+      "ready_selector": "main",
+      "covers": {
+        "changedPaths": ["src/lib/time.ts"],
+        "triggerOnlyPaths": [],
+        "requirementKeys": []
+      }
+    }
+  ]
+}
