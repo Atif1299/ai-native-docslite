@@ -6,7 +6,7 @@
       "state": "resolved",
       "viewports": [375, 768, 1280],
       "theme": "light",
-      "ready_selector": "main",
+      "ready_selector": "h1",
       "covers": {
         "changedPaths": ["src/lib/time.ts"],
         "triggerOnlyPaths": [],

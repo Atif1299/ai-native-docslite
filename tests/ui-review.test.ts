@@ -57,7 +57,7 @@ describe("ui review coverage manifest", () => {
     expect(
       scenario?.ready_selector,
       "scenario needs a visible ready selector",
-    ).toBe("main");
+    ).toBe("h1");
     for (const key of scenario?.covers.requirementKeys ?? []) {
       expect(
         key,
