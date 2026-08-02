@@ -1,5 +1,6 @@
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
+/** Formats a document timestamp for UI copy, including future timestamps. */
 export function relativeTime(iso: string) {
   const then = new Date(iso).getTime();
   if (Number.isNaN(then)) return "Updated recently";
